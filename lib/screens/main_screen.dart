@@ -23,7 +23,8 @@ class _MainScreenState extends State<MainScreen> {
       tags: "Chicken, Naan",
       rating: 4.9,
       discount: 20,
-      imageUrl: "https://theoptimiz.com/restro/public/Resturants/kake-da-hotel.png",
+      imageUrl:
+          "https://theoptimiz.com/restro/public/Resturants/kake-da-hotel.png",
       distance: 6286.79,
     ),
     // Add more restaurants as needed
@@ -60,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
         Placemark placemark = placemarks[0];
         setState(() {
           currentAddress =
-          '${placemark.locality}, ${placemark.administrativeArea}, ${placemark.country}';
+              '${placemark.locality}, ${placemark.administrativeArea}, ${placemark.country}';
         });
       }
     } catch (e) {
@@ -107,16 +108,16 @@ class _MainScreenState extends State<MainScreen> {
                   child: SizedBox(
                     width: 154,
                     height: 21,
-                      child: Text(
-                        'Alpha 1,Greater Noida $currentAddress',
-                        style: GoogleFonts.poppins(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          height: 1.7,
-                          color: Color(0xff000000),
-                        ),
-                        overflow: TextOverflow.ellipsis,
+                    child: Text(
+                      'Alpha 1,Greater Noida $currentAddress',
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        height: 1.7,
+                        color: Color(0xff000000),
                       ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                 ),
               ),
@@ -157,219 +158,14 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ),
               ),
+              Categories(),
+              SearchFoodItems(searchController: SearchController()),
               ListView.builder(
                 itemCount: restaurants.length,
                 itemBuilder: (context, index) {
                   return Restaurants(restaurant: restaurants[index]);
                 },
-              ), //NearbyRestraunt
-              Categories(),
-              SearchFoodItems(searchController: SearchController()),
-
-              //restraunt1
-              Positioned(
-
-                left: 19,
-                top: 424,
-                child: Container(
-                  width: 346,
-                  height: 185,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0x3f000000),
-                        offset: Offset(4, 6),
-                        blurRadius: 5,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.fromLTRB(285, 98, 11, 12),
-                          width: 330,
-                          height: 130,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: AssetImage(
-                                      "assets/images/Intersect.png"))),
-
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            child: Align(
-                                child: SizedBox(
-                                  width: 34,
-                                  height: 20,
-                                  child: Image.asset(
-                                    'assets/icons/rating.png',
-                                    width: 34,
-                                    height: 20,
-                                    alignment: Alignment(5, 2),
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Container(
-                          width: 330,
-                          height: 53,
-                          decoration: BoxDecoration(
-                              color: Color(0xffffffff),
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(7, 2, 78, 19),
-                                child: Text(
-                                  'Domino’s Pizza',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    height: 1.5,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                  margin: EdgeInsets.fromLTRB(0, 8, 0, 8),
-                                  height: double.infinity,
-                                  child: Row(
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          margin:
-                                          EdgeInsets.fromLTRB(0, 0, 4, 0),
-                                          width: 27,
-                                          height: 27,
-                                          child: Image.asset(
-                                              "assets/icons/Discount.png"),
-                                        ),
-                                        Container(
-                                          margin:
-                                          EdgeInsets.fromLTRB(0, 0, 0, 1),
-                                          child: Text(
-                                            '20% FLAT OFF',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w700,
-                                              height: 1.5,
-                                              color: Color(0xffff0000),
-                                            ),
-                                          ),
-                                        ),
-                                      ])),
-                            ],
-                          ),
-                        )
-                      ]),
-                ),
-              ), //restraunt2
-              Positioned(
-                left: 19,
-                top: 630,
-                child: Container(
-                  width: 346,
-                  height: 185,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0x3f000000),
-                        offset: Offset(4, 6),
-                        blurRadius: 5,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.fromLTRB(285, 98, 11, 12),
-                          width: 330,
-                          height: 130,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: AssetImage(
-                                      "assets/images/Intersect.png"))),
-
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            child: Align(
-                                child: SizedBox(
-                                  width: 34,
-                                  height: 20,
-                                  child: Image.asset(
-                                    'assets/icons/rating.png',
-                                    width: 34,
-                                    height: 20,
-                                    alignment: Alignment(5, 2),
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Container(
-                          width: 330,
-                          height: 53,
-                          decoration: BoxDecoration(
-                              color: Color(0xffffffff),
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(7, 2, 78, 19),
-                                child: Text(
-                                  'Domino’s Pizza',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    height: 1.5,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                  margin: EdgeInsets.fromLTRB(0, 8, 0, 8),
-                                  height: double.infinity,
-                                  child: Row(
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          margin:
-                                          EdgeInsets.fromLTRB(0, 0, 4, 0),
-                                          width: 27,
-                                          height: 27,
-                                          child: Image.asset(
-                                              "assets/icons/Discount.png"),
-                                        ),
-                                        Container(
-                                          margin:
-                                          EdgeInsets.fromLTRB(0, 0, 0, 1),
-                                          child: Text(
-                                            '20% FLAT OFF',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w700,
-                                              height: 1.5,
-                                              color: Color(0xffff0000),
-                                            ),
-                                          ),
-                                        ),
-                                      ])),
-                            ],
-                          ),
-                        )
-                      ]),
-                ),
-              ), //restraunt3
+              ),
             ],
           ),
         ),
