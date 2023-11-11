@@ -36,7 +36,7 @@ class _RestaurantsState extends State<Restaurants> {
       left: 19,
       top: 218,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 187, 25, 10),
+        padding: const EdgeInsets.fromLTRB(28, 194, 56, 17),
         child: Container(
           width: 346,
           height: 185,
