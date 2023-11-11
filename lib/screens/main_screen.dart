@@ -107,16 +107,16 @@ class _MainScreenState extends State<MainScreen> {
                   child: SizedBox(
                     width: 154,
                     height: 21,
-                      child: Text(
-                        'Alpha 1,Greater Noida $currentAddress',
-                        style: GoogleFonts.poppins(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          height: 1.7,
-                          color: Color(0xff000000),
-                        ),
-                        overflow: TextOverflow.ellipsis,
+                    child: Text(
+                      'Alpha 1,Greater Noida $currentAddress',
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        height: 1.5,
+                        color: Color(0xff000000),
                       ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                 ),
               ),
@@ -169,10 +169,10 @@ class _MainScreenState extends State<MainScreen> {
               //restraunt1
               Positioned(
 
-                left: 19,
+                left: 7,
                 top: 424,
                 child: Container(
-                  width: 346,
+                  width: 345,
                   height: 185,
                   decoration: BoxDecoration(
                     boxShadow: [
@@ -187,7 +187,7 @@ class _MainScreenState extends State<MainScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          padding: EdgeInsets.fromLTRB(285, 98, 11, 12),
+                          padding: EdgeInsets.fromLTRB(280, 98, 10, 12),
                           width: 330,
                           height: 130,
                           decoration: BoxDecoration(
@@ -202,12 +202,12 @@ class _MainScreenState extends State<MainScreen> {
                             height: double.infinity,
                             child: Align(
                                 child: SizedBox(
-                                  width: 34,
-                                  height: 20,
+                                  width: 32,
+                                  height: 18,
                                   child: Image.asset(
                                     'assets/icons/rating.png',
-                                    width: 34,
-                                    height: 20,
+                                    width: 32,
+                                    height: 18,
                                     alignment: Alignment(5, 2),
                                   ),
                                 )),
@@ -270,7 +270,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ), //restraunt2
               Positioned(
-                left: 19,
+                left: 7,
                 top: 630,
                 child: Container(
                   width: 346,
@@ -303,12 +303,12 @@ class _MainScreenState extends State<MainScreen> {
                             height: double.infinity,
                             child: Align(
                                 child: SizedBox(
-                                  width: 34,
-                                  height: 20,
+                                  width: 32,
+                                  height: 18,
                                   child: Image.asset(
                                     'assets/icons/rating.png',
-                                    width: 34,
-                                    height: 20,
+                                    width: 32,
+                                    height: 18,
                                     alignment: Alignment(5, 2),
                                   ),
                                 )),
@@ -377,3 +377,4 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
+

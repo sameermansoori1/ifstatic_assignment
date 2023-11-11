@@ -36,7 +36,7 @@ class _RestaurantsState extends State<Restaurants> {
       left: 19,
       top: 218,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(28, 194, 56, 17),
+        padding: const EdgeInsets.fromLTRB(16, 187, 18, 10),
         child: Container(
           width: 346,
           height: 185,
@@ -53,7 +53,7 @@ class _RestaurantsState extends State<Restaurants> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.fromLTRB(285, 98, 11, 12),
+                padding: EdgeInsets.fromLTRB(285, 99, 9, 12),
                 width: 330,
                 height: 130,
                 decoration: BoxDecoration(
@@ -139,3 +139,4 @@ class _RestaurantsState extends State<Restaurants> {
     );
   }
 }
+
