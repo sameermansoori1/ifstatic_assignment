@@ -29,13 +29,11 @@ class _MainScreenState extends State<MainScreen> {
     // Add more restaurants as needed
   ];
   String currentAddress = '';
-  late TextEditingController _searchController;
 
   @override
   void initState() {
     super.initState();
     _requestLocationPermission();
-    _searchController = TextEditingController();
   }
 
   Future<void> _requestLocationPermission() async {
@@ -102,7 +100,6 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
 
-              SearchFoodItems(searchController: _searchController,),
               Positioned(
                 left: 122,
                 top: 24,
@@ -110,13 +107,6 @@ class _MainScreenState extends State<MainScreen> {
                   child: SizedBox(
                     width: 154,
                     height: 21,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        _getCurrentLocation();
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0xffffe1e1), // Set the background color to transparent
-                      ),
                       child: Text(
                         'Alpha 1,Greater Noida $currentAddress',
                         style: GoogleFonts.poppins(
@@ -127,7 +117,6 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                         overflow: TextOverflow.ellipsis,
                       ),
-                    ),
                   ),
                 ),
               ),
@@ -175,10 +164,11 @@ class _MainScreenState extends State<MainScreen> {
                 },
               ), //NearbyRestraunt
               Categories(),
+              SearchFoodItems(searchController: SearchController()),
 
               //restraunt1
               Positioned(
-                // resoneeMR (552:14)
+
                 left: 19,
                 top: 424,
                 child: Container(
@@ -197,7 +187,6 @@ class _MainScreenState extends State<MainScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          // autogrouppery93H (91GnFBex2Twp5x1Ya2PeRy)
                           padding: EdgeInsets.fromLTRB(285, 98, 11, 12),
                           width: 330,
                           height: 130,
@@ -234,7 +223,6 @@ class _MainScreenState extends State<MainScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                // dominospizzaEQb (552:19)
                                 margin: EdgeInsets.fromLTRB(7, 2, 78, 19),
                                 child: Text(
                                   'Domino’s Pizza',
@@ -247,7 +235,6 @@ class _MainScreenState extends State<MainScreen> {
                                 ),
                               ),
                               Container(
-                                // flatoffJ9Z (552:27)
                                   margin: EdgeInsets.fromLTRB(0, 8, 0, 8),
                                   height: double.infinity,
                                   child: Row(
@@ -255,7 +242,6 @@ class _MainScreenState extends State<MainScreen> {
                                       CrossAxisAlignment.center,
                                       children: [
                                         Container(
-                                          // discountcg3 (552:28)
                                           margin:
                                           EdgeInsets.fromLTRB(0, 0, 4, 0),
                                           width: 27,
@@ -264,7 +250,6 @@ class _MainScreenState extends State<MainScreen> {
                                               "assets/icons/Discount.png"),
                                         ),
                                         Container(
-                                          // flatoffVjq (552:29)
                                           margin:
                                           EdgeInsets.fromLTRB(0, 0, 0, 1),
                                           child: Text(
@@ -285,7 +270,6 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ), //restraunt2
               Positioned(
-                // resoneeMR (552:14)
                 left: 19,
                 top: 630,
                 child: Container(
@@ -304,7 +288,6 @@ class _MainScreenState extends State<MainScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          // autogrouppery93H (91GnFBex2Twp5x1Ya2PeRy)
                           padding: EdgeInsets.fromLTRB(285, 98, 11, 12),
                           width: 330,
                           height: 130,
@@ -341,7 +324,6 @@ class _MainScreenState extends State<MainScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                // dominospizzaEQb (552:19)
                                 margin: EdgeInsets.fromLTRB(7, 2, 78, 19),
                                 child: Text(
                                   'Domino’s Pizza',
@@ -354,7 +336,6 @@ class _MainScreenState extends State<MainScreen> {
                                 ),
                               ),
                               Container(
-                                // flatoffJ9Z (552:27)
                                   margin: EdgeInsets.fromLTRB(0, 8, 0, 8),
                                   height: double.infinity,
                                   child: Row(
@@ -362,7 +343,6 @@ class _MainScreenState extends State<MainScreen> {
                                       CrossAxisAlignment.center,
                                       children: [
                                         Container(
-                                          // discountcg3 (552:28)
                                           margin:
                                           EdgeInsets.fromLTRB(0, 0, 4, 0),
                                           width: 27,
@@ -371,7 +351,6 @@ class _MainScreenState extends State<MainScreen> {
                                               "assets/icons/Discount.png"),
                                         ),
                                         Container(
-                                          // flatoffVjq (552:29)
                                           margin:
                                           EdgeInsets.fromLTRB(0, 0, 0, 1),
                                           child: Text(

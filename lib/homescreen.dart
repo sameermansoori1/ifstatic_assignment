@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ifstatic_technologies_assignment/screens/main_screen.dart';
+import 'package:ifstatic_technologies_assignment/widgets/searchfooditems.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,8 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.white,
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+
               MainScreen(),
             ],
           ),

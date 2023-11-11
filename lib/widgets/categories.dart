@@ -18,7 +18,6 @@ class _CategoriesState extends State<Categories> {
           left: 14.0,
           child: InkWell(
             onTap: () {
-            // Set the selected index and trigger a rebuild
             setState(() {
               selectedCategoryIndex = 0;
             });
@@ -46,13 +45,13 @@ class _CategoriesState extends State<Categories> {
           left: 72.0,
           child: InkWell(
             onTap: () {
-              // Set the selected index and trigger a rebuild
+
               setState(() {
                 selectedCategoryIndex = 1;
               });
             },
             child: Container(
-              height: 39, // Adjusted height to accommodate the image and text
+              height: 39,
               width: 84,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(80),
@@ -67,7 +66,7 @@ class _CategoriesState extends State<Categories> {
                       height: 30,
                       image: AssetImage("assets/icons/pizza.png"),
                     ),
-                     // Adjust the spacing between image and text
+                     //
                     Text(
                       'Pizza',
                       style: TextStyle(
@@ -86,7 +85,6 @@ class _CategoriesState extends State<Categories> {
           top: 57.0,
           left: 165.0,
           child: InkWell(onTap: () {
-            // Set the selected index and trigger a rebuild
             setState(() {
               selectedCategoryIndex = 2;
             });
@@ -112,7 +110,6 @@ class _CategoriesState extends State<Categories> {
           top: 57.0,
           left: 235.0,
           child: InkWell(onTap: () {
-            // Set the selected index and trigger a rebuild
             setState(() {
               selectedCategoryIndex = 3;
             });
@@ -139,7 +136,6 @@ class _CategoriesState extends State<Categories> {
           left: 304.0,
           child: InkWell(
             onTap: () {
-              // Set the selected index and trigger a rebuild
               setState(() {
                 selectedCategoryIndex = 4;
               });

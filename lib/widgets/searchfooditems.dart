@@ -1,27 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Restaurantt {
-  final int id;
-  final String name;
-  final String tags;
-  final double rating;
-  final int discount;
-  final String imageUrl;
-  final double distance;
 
-  Restaurantt({
-    required this.id,
-    required this.name,
-    required this.tags,
-    required this.rating,
-    required this.discount,
-    required this.imageUrl,
-    required this.distance,
-  });
-}
 
 class SearchFoodItems extends StatefulWidget {
-  final TextEditingController searchController; // Add this line
+  final TextEditingController searchController;
 
   const SearchFoodItems({required this.searchController, Key? key}) : super(key: key);
 
@@ -30,38 +12,6 @@ class SearchFoodItems extends StatefulWidget {
 }
 
 class _SearchFoodItemsState extends State<SearchFoodItems> {
-  late List<Restaurantt> restaurants;
-  late List<Restaurantt> displayedRestaurants;
-
-  @override
-  void initState() {
-    super.initState();
-    // Initialize the restaurants list (you can fetch this from the API)
-    restaurants = [
-      Restaurantt(
-        id: 5,
-        name: 'Domino’s Pizza',
-        tags: 'Chicken, Naan',
-        rating: 4.9,
-        discount: 20,
-        imageUrl: 'assets/images/Intersect.png',
-        distance: 6286.79,
-      ),
-      // Add more restaurants here...
-    ];
-
-    // Initially, displayed restaurants are the same as all restaurants
-    displayedRestaurants = List.from(restaurants);
-  }
-
-  void searchRestaurants(String query) {
-    setState(() {
-      displayedRestaurants = restaurants
-          .where((restaurant) =>
-          restaurant.name.toLowerCase().contains(query.toLowerCase()))
-          .toList();
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +41,6 @@ class _SearchFoodItemsState extends State<SearchFoodItems> {
             Expanded(
               child: TextField(
                 controller: widget.searchController ,
-                onChanged: (query) => searchRestaurants(query),
                 decoration: InputDecoration(
                   hintText: 'Search Food Items',
                   hintStyle: TextStyle(
@@ -110,6 +59,9 @@ class _SearchFoodItemsState extends State<SearchFoodItems> {
     );
   }
 }
+
+
+
 
 
 
