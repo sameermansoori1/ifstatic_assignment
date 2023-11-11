@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
       discount: 20,
       imageUrl: "https://theoptimiz.com/restro/public/Resturants/kake-da-hotel.png",
       distance: 6286.79,
-    ),
+    ),//done
     // Add more restaurants as needed
   ];
   String currentAddress = '';

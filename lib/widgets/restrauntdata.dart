@@ -17,7 +17,7 @@ class Restaurant {
     required this.discount,
     required this.imageUrl,
     required this.distance,
-  });
+  });//done
 }
 
 class Restaurants extends StatefulWidget {
