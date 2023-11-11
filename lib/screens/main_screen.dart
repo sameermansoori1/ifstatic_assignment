@@ -112,7 +112,7 @@ class _MainScreenState extends State<MainScreen> {
                         style: GoogleFonts.poppins(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
-                          height: 1.5,
+                          height: 1.7,
                           color: Color(0xff000000),
                         ),
                         overflow: TextOverflow.ellipsis,
