@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ifstatic_technologies_assignment/services/location.dart';
 
 import 'package:ifstatic_technologies_assignment/widgets/categories.dart';
 import 'package:ifstatic_technologies_assignment/widgets/restrauntdata.dart';
@@ -28,45 +29,6 @@ class _MainScreenState extends State<MainScreen> {
     ),//done
     // Add more restaurants as needed
   ];
-  String currentAddress = '';
-
-  @override
-  void initState() {
-    super.initState();
-    _requestLocationPermission();
-  }
-
-  Future<void> _requestLocationPermission() async {
-    var status = await Permission.location.request();
-    if (status.isGranted) {
-      _getCurrentLocation();
-    } else {
-      // Handle the case where the user denies permission
-      print('Location permission denied');
-    }
-  }
-
-  Future<void> _getCurrentLocation() async {
-    try {
-      Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high,
-      );
-      List<Placemark> placemarks = await placemarkFromCoordinates(
-        position.latitude,
-        position.longitude,
-      );
-
-      if (placemarks != null && placemarks.isNotEmpty) {
-        Placemark placemark = placemarks[0];
-        setState(() {
-          currentAddress =
-          '${placemark.locality}, ${placemark.administrativeArea}, ${placemark.country}';
-        });
-      }
-    } catch (e) {
-      print('Error: $e');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -100,26 +62,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
 
-              Positioned(
-                left: 122,
-                top: 24,
-                child: Align(
-                  child: SizedBox(
-                    width: 154,
-                    height: 21,
-                    child: Text(
-                      'Alpha 1,Greater Noida $currentAddress',
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        height: 1.5,
-                        color: Color(0xff000000),
-                      ),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ),
-              ),
+              LocationLatLng(),
               //Location
               Positioned(
                 // locationonFKH (552:6)
