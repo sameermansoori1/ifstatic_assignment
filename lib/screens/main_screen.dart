@@ -24,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
       tags: "Chicken, Naan",
       rating: 4.9,
       discount: 20,
-      imageUrl: "https://theoptimiz.com/restro/public/Resturants/kake-da-hotel.png",
+      imageUrl: "https://lh3.googleusercontent.com/p/AF1QipMzpuz1YnaC-avlstrCdTo3hBoWQWE9mITxs4kN=s680-w680-h510",
       distance: 6286.79,
     ),//done
     // Add more restaurants as needed
